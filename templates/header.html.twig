@@ -1,0 +1,39 @@
+{# {% set headerBackgroundImage = asset('img/bg_header.png') %} #}
+
+<header class="header row-limit-size" style="background-image: url('{{ asset('img/bg_header.png') }}');">
+	<div class="header-content">
+		<div
+			class="header-search">
+			{# <form action="" method="POST"> #}
+			<input type="text" placeholder="Rechercher des bonbons">
+			<button type="submit">
+				<i class="fas fa-search"></i>
+			</button>
+		</div>
+		<div class="header-logo">
+			<img class="imgHeader" src="{{ asset('img/logo1.png') }}" alt="logo">
+		</div>
+		<div class="header-account">
+			<a href="#">
+				<i class="fas fa-user"></i>
+			</a>
+			<a href="#">
+				<i class="fas fa-shopping-cart"></i>
+			</a>
+		</div>
+	</div>
+	<nav class="header-nav">
+		<ul>
+			{% set displayedCategories = [] %}
+			{% for category in categories %}
+				{% if category not in displayedCategories %}
+					<li>
+						<a href="{{ path('category_sweets', { 'id': category.id }) }}">{{ category.name }}</a>
+
+					</li>
+					{% set displayedCategories = displayedCategories|merge([category]) %}
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</nav>
+</header>

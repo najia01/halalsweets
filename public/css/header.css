@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row-limit-size {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: #fff;
+  background-image: url("img/bg_header.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+.header .header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+}
+.header .header-search {
+  display: flex;
+}
+.header .header-search input[type=text] {
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+.header .header-search button[type=submit] {
+  padding: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.header .header-search button[type=submit] i {
+  font-size: 1.2rem;
+}
+.header .header-logo {
+  margin-right: 150px;
+}
+.header .header-logo .imgHeader {
+  width: 180px;
+}
+.header .header-account a {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 1.8rem;
+}
+
+.header-nav {
+  padding: 10px 0;
+}
+.header-nav ul {
+  display: flex;
+  list-style: none;
+}
+.header-nav ul li {
+  margin-right: 100px;
+}
+.header-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "VisualistDemoRegular";
+}/*# sourceMappingURL=header.css.map */

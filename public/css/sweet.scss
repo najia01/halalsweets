@@ -1,0 +1,92 @@
+$font-gotham-medium-italic: 'gotham-medium-italic';
+$font-gotham-book: 'Gotham Book';
+$font-Visualist-Demo-Regular: 'VisualistDemoRegular';
+$font-Jackie: 'jackie';
+$font-JackieB: 'jackie bold';
+$font-size: 1.2rem;
+$primary: #FC177F;
+$secondary: #FF66C4;
+$purple: #CB6CE6;
+$black: #161616;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row-limit-size {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 40px;
+    font-family: $font-Jackie;
+    color: $primary;
+}
+
+.container-card {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+    .list-sweets {
+        list-style-type: none;
+        display: contents;
+
+        & li {
+            width: 350px;
+
+            .card {
+                background-color:#ffd0eb;
+                border: 1px solid #ccc;
+                padding: 20px;
+                text-align: center;
+                border-radius: 25px;
+
+                .card-image {
+                    img {
+                        max-width: 100%;
+                        width: 250px;
+                        border-radius: 20px;
+                    }
+                }
+
+                .card-description {
+                    h2 {
+                        font-size: 1.5rem;
+                        margin: 10px 0;
+                        font-family: $font-gotham-medium-italic;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        font-family: $font-gotham-medium-italic;
+                    }
+
+                    .card-buy-link {
+                        display: inline-block;
+                        background-color: $primary;
+                        color: #fff;
+                        text-decoration: none;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        margin-top: 10px;
+                        font-weight: bold;
+                        transition: background-color 0.3s;
+
+                        &:hover {
+                            background-color: $purple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

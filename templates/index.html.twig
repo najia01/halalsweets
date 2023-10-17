@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HalalSweetShop{% endblock %}
+
+
+{% block body %}
+	
+
+	<section class="hero">
+		<div class="container-hero row-limit-size">
+			<div class="panoramic-image">
+				<img class="imgHero" src="{{ asset('img/hero.jpg') }}" alt="cadre de bonbons">
+			</div>
+			<div class="overlay">
+				<p class="textHero">Découvrez la douceur pure à chaque bouchée!</p>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="news">
+		<h1 class="titleNews">Les nouveautés</h1>
+
+
+		<div class="card">
+			<input type="radio" name="select" id="slide_1" checked>
+			<input type="radio" name="select" id="slide_2">
+			<input type="radio" name="select" id="slide_3">
+			<input type="radio" name="select" id="slide_4">
+			<input type="checkbox" id="slideImg">
+
+			<div class="slider">
+				<label for="slide_1" class="slide slide_1"></label>
+				<label for="slide_2" class="slide slide_2"></label>
+				<label for="slide_3" class="slide slide_3"></label>
+				<label for="slide_4" class="slide slide_4"></label>
+			</div>
+
+			<div class="inner_part">
+				<label for="slideImg" class="img">
+					<img class="img_1" src="{{ asset('img/acidule.jpeg') }}" alt="cadre de bonbons">
+				</label>
+				<div class="content content_1">
+					<div class="title">Bonbon Miami Stick</div>
+					<div class="text">
+						Voici le petit nouveau de chez Haribo le Rainbow pik. Un bonbon arc-en-ciel à la pâte de fruits. Un bonbon doux et légèrement acidulée à la fois.
+					</div>
+					<button>Voir</button>
+				</div>
+			</div>
+
+			<div class="inner_part">
+				<label for="slideImg" class="img">
+					<img class="img_2" src="{{ asset('img/cacahuete.png') }}" alt="cadre de bonbons">
+				</label>
+				<div class="content content_2">
+					<div class="title">Cacahuètes Feuilletées</div>
+					<div class="text">
+						Tout le monde connaît les authentiques cacahouètes feuilletées de chez Kubli. Un goût unique, elle est croquantes et généreuse.
+					</div>
+					<button>Read More</button>
+				</div>
+			</div>
+
+			<div class="inner_part">
+				<label for="slideImg" class="img">
+					<img class="img_3" src="{{ asset('img/string.jpg') }}" alt="cadre de bonbons">
+				</label>
+				<div class="content content_3">
+					<div class="title">String Femme Bonbon</div>
+					<div class="text">Le string pour femme à croquer !! Idéal pour les blagues entre grand ! Contient environ 300 bonbons..
+					</div>
+					<button>Read More</button>
+				</div>
+			</div>
+
+			<div class="inner_part">
+				<label for="slideImg" class="img">
+					<img class="img_4" src="{{ asset('img/fraises.jpeg') }}" alt="cadre de bonbons">
+				</label>
+				<div class="content content_4">
+					<div class="title">Fraise Des Bois Acidulé</div>
+					<div class="text">
+						Craquez pour la Fraise Sauvage des Bois acidulé. Un régal pour les papilles.
+					</div>
+					<button>Read More</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<p class="textSweet">Laissez-vous tenter par une explosion de saveurs sucrées , HalalSweetShop votre destination gourmande en ligne !"</p>
+
+	<section class="offers" >
+		<h2 class="titleOffers">Offres du moment</h2>
+
+		{# <div class="card-deck row-limit-size">
+			{% include 'offres_du_moment.html.twig' with {'offresDuMoment': offresDuMoment} %}
+
+		</div> #}
+
+	</section>
+
+	<div class="concept">
+
+		<img class="panoramicSweets" src="{{ asset('img/concept.png') }}" alt="clickandcollect">
+		<p class="oval-text">Nouveau concept de Click & Collect pour récupérer vos articles plus rapidement et sans frais !</p>
+
+
+	</div>
+
+	<div class="containerCollect">
+
+		<div class="collect-item">
+			<img class="imgCollect" src="{{ asset('img/commande.png') }}" alt="clickandcollect">
+			<p class="textCollect">Je commande  à partir du site Internet du commerçant.</p>
+		</div>
+
+		<div class="collect-item">
+			<img class="imgCollect" src="{{ asset('img/paiement.png') }}" alt="clickandcollect">
+			<p class="textCollect">Paiement sécurisé</p>
+		</div>
+
+		<div class="collect-item">
+			<img class="imgCollect" src="{{ asset('img/chrono.png') }}" alt="clickandcollect">
+			<p class="textCollect">Ma commande est préparée par le vendeur dans les 2 heures (heure limite 16h)</p>
+		</div>
+
+		<div class="collect-item">
+			<img class="imgCollect" src="{{ asset('img/retrait.png') }}" alt="clickandcollect">
+			<p class="textCollect">Je me rends à la boutique lors d’un rendez-vous convenu entre le commerçant et moi-même.</p>
+		</div>
+
+	</div>
+
+	
+{% endblock %}

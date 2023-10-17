@@ -1,7 +1,19 @@
 controllers:
-    resource: ../src/Controller/
-    type: annotation
+  resource: ../src/Controller/
+  type: annotation
 
 kernel:
-    resource: ../src/Kernel.php
-    type: annotation
+  resource: ../src/Kernel.php
+  type: annotation
+
+# route pour les catégories
+# config/routes.yaml
+app_category:
+  path: "/category/{id}"
+  controller: App\Controller\CategoryController::categoryAction
+
+# route pour les bonbons par categorie
+
+sweets_by_category:
+  path: "/category/{id}"
+  controller: App\Controller\SweetsController::categorySweets
