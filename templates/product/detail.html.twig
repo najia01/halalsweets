@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HalaSweetsShop!{% endblock %}
+
+
+
+{% block body %}
+
+   
+    <div class="product-details row-limit-size">
+        <div class="product-image">
+            <img class="imgSweet" src="{{ asset('img/' ~ sweet.thumbnail) }}" alt="{{ sweet.name }}">
+        </div>
+        <div class="product-info">
+            <h2>{{ sweet.name }}</h2>
+           
+            <p class="description">{{ sweet.description }}</p>
+             <p class="price">Prix : {{ sweet.price }} €</p>
+            {# <a href="{{ path('add_to_cart', { 'id': sweet.id }) }}" class="add-to-cart-link">Ajouter au panier</a> #}
+            <a href="#" class="add-to-cart-link">  <i class="fas fa-shopping-cart"></i> </a>
+        
+        </div>
+    </div>
+
+{% endblock %}
+
+

@@ -9,6 +9,7 @@ use App\Repository\SweetsRepository;
 
 class SweetsController extends AbstractController
 {
+    
     /**
      * @Route("/category/{id}", name="category_sweets")
      */

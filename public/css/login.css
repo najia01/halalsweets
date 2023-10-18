@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row-limit-size {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "gotham-medium-italic";
+  src: url(../fonts/gotham-medium-italic.ttf);
+}
+@font-face {
+  font-family: "gotham-Book";
+  src: url(../fonts/Gotham-Book.otf);
+}
+@font-face {
+  font-family: "VisualistDemoRegular";
+  src: url(../fonts/VisualistDemoRegular.ttf);
+}
+@font-face {
+  font-family: "jackie";
+  src: url(../fonts/jackie.ttf);
+}
+@font-face {
+  font-family: "jackie bold";
+  src: url(../fonts/Jackie\ Bold.otf);
+}
+.container-form {
+  background-image: url("../img/cadre.jpg");
+  background-size: cover;
+  padding: 20px;
+  height: 600px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+}
+.container-form .connect-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 40px;
+  font-family: "jackie bold";
+  color: #FC177F;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.container-form label {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: deeppink;
+}
+.container-form input[type=email],
+.container-form input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #CB6CE6;
+  border-radius: 5px;
+}
+.container-form button {
+  background-color: #FC177F;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.container-form button:hover {
+  background-color: #FF66C4;
+}
+.container-form .alert {
+  background-color: #ff6b6b;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+.container-form .mt-3 {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: white;
+  font-family: "gotham-medium-italic";
+}
+.container-form .mt-3 a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #FC177F;
+  font-family: "gotham-medium-italic";
+}
+.container-form .mt-3 a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=login.css.map */

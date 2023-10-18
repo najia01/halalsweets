@@ -17,3 +17,28 @@ app_category:
 sweets_by_category:
   path: "/category/{id}"
   controller: App\Controller\SweetsController::categorySweets
+
+# route pour le detail du bonbon
+product_detail:
+  path: "/product/{id}"
+  controller: App\Controller\ProductController::detail
+
+# route pour le panier
+add_to_cart:
+  path: /add-to-cart/{id}
+  controller: App\Controller\CartController::addToCart
+
+# route pour la connexion/deconnexion
+login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+
+logout:
+  path: /logout
+  controller: App\Controller\SecurityController::logout
+
+
+# route pour register 
+register:
+    path: /register
+    controller: App\Controller\RegistrationController::register

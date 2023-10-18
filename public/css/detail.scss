@@ -1,0 +1,80 @@
+$font-gotham-medium-italic: 'gotham-medium-italic';
+$font-gotham-book: 'Gotham Book';
+$font-Visualist-Demo-Regular: 'VisualistDemoRegular';
+$font-Jackie: 'jackie';
+$font-JackieB: 'jackie bold';
+
+$font-size: 1.2rem;
+$primary: #FC177F;
+$secondary: #FF66C4;
+$purple: #CB6CE6;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row-limit-size {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+
+    .product-image {
+
+        max-width: 500px;
+        padding: 10px;
+
+        .imgSweet {
+            width: 450px;
+        }
+    }
+
+    .product-info {
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            font-size: 1.7rem;
+            width: 400px;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 1.3rem;
+            font-family: $font-gotham-book;
+            font-style: italic;
+            margin-top: 60px;
+            height: 200px;
+            width: 400px;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-family: $font-gotham-book;
+        }
+
+
+        .add-to-cart-link {
+
+            .fas {
+                color: $purple;
+                margin-top: 60px;
+                font-size: 2rem;
+            }
+
+        }
+    }
+}

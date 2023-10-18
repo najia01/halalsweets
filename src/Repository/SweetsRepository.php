@@ -30,6 +30,14 @@ class SweetsRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+    public function findSweetById($id)
+    {
+        return $this->createQueryBuilder('s')
+            ->andWhere('s.id = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
 
 //    /**
 //     * @return Sweets[] Returns an array of Sweets objects

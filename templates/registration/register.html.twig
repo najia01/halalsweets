@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription
+{% endblock %}
+
+{% block body %}
+	{% for flash_error in app.flashes('verify_email_error') %}
+		<div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+	{% endfor %}
+	<section class="container-formRegister">
+		<div class="container-register">
+
+			<h1 class="titleRegister">Inscription</h1>
+			{{ form_start(registrationForm) }}
+			<fieldset>
+				<legend>Mon identité</legend>
+				<div class="input-container">
+					{{ form_row(registrationForm.lastname) }}
+				</div>
+				<div class="input-container">
+					{{ form_row(registrationForm.name) }}
+				</div>
+				<div class="input-container">
+					{{ form_row(registrationForm.email) }}
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Mes coordonnées</legend>
+				<div class="input-container">
+					{{ form_row(registrationForm.adress) }}
+				</div>
+				<div class="input-container">
+					{{ form_row(registrationForm.zipcode) }}
+				</div>
+				<div class="input-container">
+					{{ form_row(registrationForm.city) }}
+				</div>
+			</fieldset>
+			<fieldset>
+
+				<div class="input-container">
+					{{ form_row(registrationForm.plainPassword, {
+            label: 'Password' }) }}
+				</div>
+			</fieldset>
+			<div class="checkbox-container">
+				{{ form_row(registrationForm.RGPDConsent) }}
+				{{ form_errors(registrationForm) }}
+			</div>
+			<div class="btn-register">
+				<button type="submit" class="btn">M'inscrire</button>
+			</div>
+			{{ form_end(registrationForm) }}
+
+
+		</div>
+	</section>
+{% endblock %}

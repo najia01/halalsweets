@@ -42,9 +42,13 @@ class Sweets
     #[ORM\JoinColumn(name: 'category_id', referencedColumnName: 'id')]
     private ?Category $category = null;
 
+    #[ORM\ManyToMany(targetEntity: Cart::class, mappedBy: 'items')]
+    private Collection $carts;
+
     public function __construct()
     {
         $this->ordersSweets = new ArrayCollection();
+        $this->carts = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -152,6 +156,33 @@ class Sweets
     {
         $this->categories->removeElement($category);
         $category->removeSweet($this);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Cart>
+     */
+    public function getCarts(): Collection
+    {
+        return $this->carts;
+    }
+
+    public function addCart(Cart $cart): static
+    {
+        if (!$this->carts->contains($cart)) {
+            $this->carts->add($cart);
+            $cart->addItem($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCart(Cart $cart): static
+    {
+        if ($this->carts->removeElement($cart)) {
+            $cart->removeItem($this);
+        }
 
         return $this;
     }

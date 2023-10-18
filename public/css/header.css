@@ -62,18 +62,20 @@
   margin-left: 20px;
   font-size: 1.8rem;
 }
-
-.header-nav {
+.header .header-account a .fas.fa-user-pink {
+  color: pink;
+}
+.header .header-nav {
   padding: 10px 0;
 }
-.header-nav ul {
+.header .header-nav ul {
   display: flex;
   list-style: none;
 }
-.header-nav ul li {
+.header .header-nav ul li {
   margin-right: 100px;
 }
-.header-nav ul li a {
+.header .header-nav ul li a {
   text-decoration: none;
   color: #fff;
   font-size: 1.5rem;

@@ -13,6 +13,9 @@
 		<link rel="stylesheet" href="{{ asset('css/header.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/sweet.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/detail.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/login.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/register.css') }}">
 		<link
 		rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -31,15 +34,15 @@
 	<body>
 
 
-
 		{% block body %}
 
-			 {% include 'header.html.twig' with { 'categories': categories } %}
+			{% include 'header.html.twig' with { 'categories': categories } %}
+			
+			
 			{% include 'index.html.twig' %}
-			{% include 'footer.html.twig' %}
+		{% include 'footer.html.twig' %}
 
-		{% endblock %}
+	{% endblock %}
 
 
-	</body>
-</html>
+</body></html>

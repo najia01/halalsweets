@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "gotham-medium-italic";
+  src: url(../fonts/gotham-medium-italic.ttf);
+}
+@font-face {
+  font-family: "gotham-Book";
+  src: url(../fonts/Gotham-Book.otf);
+}
+@font-face {
+  font-family: "VisualistDemoRegular";
+  src: url(../fonts/VisualistDemoRegular.ttf);
+}
+@font-face {
+  font-family: "jackie";
+  src: url(../fonts/jackie.ttf);
+}
+@font-face {
+  font-family: "jackie bold";
+  src: url(../fonts/Jackie\ Bold.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-formRegister {
+  background-image: url("../img/cadreb.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+}
+.container-formRegister .container-register {
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+}
+.container-formRegister .container-register .titleRegister {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 60px;
+  padding: 40px;
+  font-family: "jackie bold";
+  color: #FC177F;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.container-formRegister .container-register fieldset {
+  padding: 10px;
+  margin: 10px 0;
+  border: inherit;
+}
+.container-formRegister .container-register fieldset legend {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Gotham Book";
+  color: #FF66C4;
+}
+.container-formRegister .container-register fieldset label {
+  font-size: 1.3rem;
+  font-family: "Gotham Book";
+  color: deeppink;
+}
+.container-formRegister .container-register fieldset .input-container {
+  margin-bottom: 20px;
+}
+.container-formRegister .container-register fieldset .input-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #CB6CE6;
+  border-radius: 5px;
+}
+.container-formRegister .container-register .btn-register {
+  text-align: center;
+  margin-top: 20px;
+}
+.container-formRegister .container-register .btn-register .btn {
+  background-color: #FC177F;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "Gotham Book";
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container-formRegister .container-register .btn-register .btn:hover {
+  background-color: #CB6CE6;
+}
+.container-formRegister .container-register .checkbox-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container-formRegister .container-register .checkbox-container .required {
+  font-size: 1.1rem;
+  color: deeppink;
+}
+.container-formRegister .container-register .checkbox-container input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+.container-formRegister .container-register .alert {
+  background-color: #ff6b6b;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}/*# sourceMappingURL=register.css.map */

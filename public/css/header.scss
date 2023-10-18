@@ -80,6 +80,9 @@ $black:#161616;
             color: #fff;
             margin-left: 20px;
             font-size: 1.8rem;
+
+            .fas.fa-user-pink {
+                color: pink;
         }
     }
 }
@@ -103,4 +106,5 @@ $black:#161616;
             }
         }
     }
+}
 }

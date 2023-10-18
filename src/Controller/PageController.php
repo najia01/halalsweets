@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PageController extends AbstractController
 {
+    
     #[Route('/', name: 'app_page')]
     public function index(): Response
     {
