@@ -1,0 +1,222 @@
+$font-gotham-medium-italic: 'gotham-medium-italic';
+$font-gotham-book: 'Gotham Book';
+$font-Visualist-Demo-Regular: 'VisualistDemoRegular';
+$font-Jackie: 'jackie';
+$font-JackieB: 'jackie bold';
+
+$font-size: 1.2rem;
+$primary: #FC177F;
+$secondary: #FF66C4;
+$purple: #CB6CE6;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row-limit-size {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: 'gotham-medium-italic';
+    src: url(../fonts/gotham-medium-italic.ttf);
+}
+
+@font-face {
+    font-family: 'gotham-Book';
+    src: url(../fonts/Gotham-Book.otf);
+}
+
+@font-face {
+    font-family: 'VisualistDemoRegular';
+    src: url(../fonts/VisualistDemoRegular.ttf);
+}
+
+@font-face {
+    font-family: 'jackie';
+    src: url(../fonts/jackie.ttf);
+}
+
+@font-face {
+    font-family: 'jackie bold';
+    src: url(../fonts/Jackie\ Bold.otf);
+}
+
+
+.title-cart {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 40px;
+    font-family: $font-JackieB;
+    color: #FC177F;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.cart-container {
+    height: auto;
+    padding: 20px;
+    border: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.cart-items {
+    border: none;
+    width: 100%;
+    font-family: $font-gotham-book;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+
+
+    .checkout-button {
+        width: 250px;
+        background: $primary;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+
+        &:hover {
+            background: $secondary;
+        }
+    }
+}
+
+.remove-button {
+    color: black;
+    text-decoration: none;
+    font-family: $font-gotham-book;
+    font-weight: bold;
+
+    .remove-button:hover {
+        color: #CB6CE6;
+    }
+}
+
+.frequent-purchases {
+    margin-top: 30px;
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .title-achats {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 40px;
+        font-family: $font-JackieB;
+        color: #FC177F;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+    }
+
+}
+
+// achats frequents 
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 38px;
+    margin-top: 60px;
+
+    .wrapper {
+        border: 2px solid $primary;
+        width: 300px;
+        height: 500px;
+        border-radius: 20px;
+    }
+
+    @keyframes myAnim {
+        0% {
+            background-position: center bottom;
+            background-size: 80%;
+        }
+    
+        100% {
+            background-position: center bottom;
+            background-size: 120%;
+        }
+    }
+    .banner-image {
+        // background-image: url('../img/banane.jpeg');
+        background-size: contain;
+        height: 300px;
+        border-radius: 20px;
+        animation: myAnim 2s ease 0s 1 normal forwards;
+
+
+
+    }
+
+    h1 {
+        font-family: $font-gotham-medium-italic;
+        color: $primary;
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+
+
+.button-wrapper {
+    margin-top: 18px;
+    text-align: center;
+
+
+    .btn {
+        border: none;
+        padding: 12px 24px;
+        border-radius: 24px;
+        font-size: 1rem;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        cursor: pointer;
+        min-width: 120px;
+    }
+
+    .btn+.btn {
+        margin-left: 10px;
+    }
+
+    .outline {
+        background: transparent;
+       background-color: $primary;
+        border: 1px solid rgba(247, 0, 255, 0.366);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: white;
+        font-family: $font-gotham-book;
+    }
+
+    .outline:hover {
+        transform: scale(1.125);
+        color:$purple;
+        border-color: rgba(255, 255, 255, 0.9);
+        transition: all 0.3s ease;
+    }
+}
+}

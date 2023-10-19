@@ -16,6 +16,8 @@
 		<link rel="stylesheet" href="{{ asset('css/detail.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/login.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/register.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/cart.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/search.css') }}">
 		<link
 		rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -27,6 +29,7 @@
 
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
+			 <script src="{{ asset('js/main.js') }}"></script>
 			<script src="https://kit.fontawesome.com/9bdb88f646.js" crossorigin="anonymous"></script>
 
 		{% endblock %}
@@ -39,7 +42,8 @@
 			{% include 'header.html.twig' with { 'categories': categories } %}
 			
 			
-			{% include 'index.html.twig' %}
+			{% include 'homepage.html.twig' %}
+	
 		{% include 'footer.html.twig' %}
 
 	{% endblock %}

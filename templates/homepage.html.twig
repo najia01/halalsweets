@@ -1,10 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}HalalSweetShop{% endblock %}
+{% block title %}HalalSweetShop
+{% endblock %}
 
 
 {% block body %}
-	
+
 
 	<section class="hero">
 		<div class="container-hero row-limit-size">
@@ -45,7 +46,7 @@
 					<div class="text">
 						Voici le petit nouveau de chez Haribo le Rainbow pik. Un bonbon arc-en-ciel à la pâte de fruits. Un bonbon doux et légèrement acidulée à la fois.
 					</div>
-				<a href="{{ path('product_detail', {'id': 19}) }}">Read More</a>
+					<a href="{{ path('product_detail', {'id': 19}) }}">Read More</a>
 				</div>
 			</div>
 
@@ -90,13 +91,60 @@
 	</section>
 	<p class="textSweet">Laissez-vous tenter par une explosion de saveurs sucrées , HalalSweetShop votre destination gourmande en ligne !"</p>
 
-	<section class="offers" >
+	<section class="offers">
+
 		<h2 class="titleOffers">Offres du moment</h2>
+		
+			<div class="container">
+				<div class="wrapper">
+					<div class="banner-image"style="background-image: url('{{ asset('img/coeur.jpeg') }}');"></div>
+					<h1>
+						Coeurs de pêches 
+					</h1>
 
-		{# <div class="card-deck row-limit-size">
-			{% include 'offres_du_moment.html.twig' with {'offresDuMoment': offresDuMoment} %}
+                    <div class="button-wrapper">
+				
+					<a href="{{ path('product_detail', {'id': 29}) }}" class="btn outline">DETAILS</a>
+				</div>
+				</div>
+				
+                <div class="wrapper">
+					<div class="banner-image"style="background-image: url('{{ asset('img/schtroumf.jpeg') }}');"></div>
+					<h1>
+						Schtroumpf 
+					</h1>
+                    <div class="button-wrapper">
+					
+					<a href="{{ path('product_detail', {'id': 28}) }}" class="btn outline">DETAILS</a>
+				</div>
+				</div>
+				
+                <div class="wrapper">
+					<div class="banner-image"style="background-image: url('{{ asset('img/oursons.jpeg') }}');"></div>
+					<h1>
+						Oursons guimauve
+					</h1>
+                    	<div class="button-wrapper">
+					
+					<a href="{{ path('product_detail', {'id': 32}) }}" class="btn outline">DETAILS</a>
+				</div>
+				</div>
+			
+                <div class="wrapper">
+					<div class="banner-image" style="background-image: url('{{ asset('img/mure.jpeg') }}');"></div>
+					<h1>
+						Mûres
+					</h1>
+                    	<div class="button-wrapper">
+					
+					<a href="{{ path('product_detail', {'id': 26}) }}" class="btn outline">DETAILS</a>
+				</div>
+				</div>
+			
+			</div>
+		</div>
 
-		</div> #}
+		</div>
 
 	</section>
 
@@ -132,5 +180,5 @@
 
 	</div>
 
-	
+
 {% endblock %}

@@ -6,6 +6,12 @@ kernel:
   resource: ../src/Kernel.php
   type: annotation
 
+# hoempage
+app_page:
+  path: /
+  controller: App\Controller\HomepageController::home
+
+
 # route pour les catégories
 # config/routes.yaml
 app_category:
@@ -25,7 +31,7 @@ product_detail:
 
 # route pour le panier
 add_to_cart:
-  path: /add-to-cart/{id}
+  path: /add-to-cart/{sweetId}
   controller: App\Controller\CartController::addToCart
 
 # route pour la connexion/deconnexion
@@ -42,3 +48,19 @@ logout:
 register:
     path: /register
     controller: App\Controller\RegistrationController::register
+
+
+# route admin dash
+admin_dashboard:
+    path: /admin
+    controller: App\Controller\Admin\DashboardController::index
+  
+    # requirements:
+    #     _role: ROLE_ADMIN
+
+
+# route recherche
+search:
+    path: /search
+    controller: App\Controller\SweetsController::searchAction
+

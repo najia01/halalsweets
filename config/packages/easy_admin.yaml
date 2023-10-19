@@ -1,0 +1,48 @@
+# config/packages/easy_admin.yaml
+easy_admin:
+    entities:
+        # Configuration pour l'administration des bonbons
+        Candy:
+            class: App\Entity\Sweets
+            label: 'Bonbons'
+            role: 'ROLE_ADMIN' # Autoriser uniquement les administrateurs à accéder à cette section
+            list:
+                fields:
+                    - name
+                    - price
+                    - stock
+                    - description
+            form:
+                fields:
+                    - name
+                    - price
+                    - stock
+                    - description
+
+        # Configuration pour l'interface utilisateur des bonbons
+        UserCandy:
+            class: App\Entity\Sweets
+            label: 'Bonbons'
+            role: 'ROLE_USER' # Autoriser uniquement les utilisateurs à accéder à cette section
+            list:
+                fields:
+                    - name
+                    - price
+                    - description
+
+        # Configuration pour l'interface utilisateur des commandes
+        Order:
+            class: App\Entity\Orders
+            label: 'Commandes'
+            role: 'ROLE_USER' # Autoriser uniquement les utilisateurs à accéder à cette section
+            list:
+                fields:
+                    - user
+                    - totalAmount
+                    - status
+
+    design:
+        # Options de conception personnalisées pour l'interface
+        brand_color: '#007bff' # Couleur personnalisée pour l'interface
+
+    # Définissez ici d'autres options de configuration pour EasyAdminBundle

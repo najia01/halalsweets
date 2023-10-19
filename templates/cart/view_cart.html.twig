@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panier
+{% endblock %}
+
+{% block body %}
+	<div class="cart-container row-limit-size">
+		<h1 class="title-cart">Votre Panier</h1>
+		<div class="cart-items">
+			<table class="cart-table">
+				<thead>
+					<tr>
+						<th>ÉLÉMENT</th>
+						<th>PRIX UNITAIRE</th>
+						<th>QTÉ</th>
+						<th>TOTAL</th>
+						<th>ACTIONS</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for item in cart.items %}
+						<tr>
+							<td>
+								<img src="{{ asset('img/' ~ item.thumbnail) }}" alt="{{ item.name }}" width="100"><br>
+								{{ item.name }}
+
+							</td>
+							<td>{{ item.price }}€</td>
+							<td>1</td>
+							<td>{{ item.price }}€</td>
+							<td>
+								<a href="{{ path('remove_from_cart', {'id': item.id}) }}" class="remove-button">Retirer</a>
+							
+							</td>
+						</tr>
+					{% endfor %}
+					<tr>
+						<td colspan="3">
+							<strong>Total de la commande :</strong>
+						</td>
+						<td>
+							<strong>{{ cart.total }}€</strong>
+						</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div
+				class="cart-summary">
+				
+				<a href="#" class="checkout-button">Paiement</a>
+			</div>
+
+		</div>
+
+
+		<div class="frequent-purchases row-limit-size">
+			<h2 class="title-achats">Les achats les plus fréquents</h2>
+			<div class="container">
+				<div class="wrapper">
+					<div class="banner-image"style="background-image: url('{{ asset('img/fraises.jpeg') }}');"></div>
+					<h1>
+						Fraises acidulées
+					</h1>
+
+                    <div class="button-wrapper">
+				
+					<a href="{{ path('product_detail', {'id': 18}) }}" class="btn outline">DETAILS</a>
+				</div>
+				</div>
+				
+                <div class="wrapper">
+					<div class="banner-image"style="background-image: url('{{ asset('img/boule.jpeg') }}');"></div>
+					<h1>
+						Boules de chewing gum
+					</h1>
+                    <div class="button-wrapper">
+					
+					<a href="{{ path('product_detail', {'id': 11}) }}" class="btn outline">DETAILS</a>
+				</div>
+				</div>
+				
+                <div class="wrapper">
+					<div class="banner-image"style="background-image: url('{{ asset('img/cable.jpeg') }}');"></div>
+					<h1>
+						Câble Rocket Framboise 
+					</h1>
+                    	<div class="button-wrapper">
+					
+					<a href="{{ path('product_detail', {'id': 21}) }}" class="btn outline">DETAILS</a>
+				</div>
+				</div>
+			
+                <div class="wrapper">
+					<div class="banner-image" style="background-image: url('{{ asset('img/banane.jpeg') }}');"></div>
+					<h1>
+						Banane Haribo
+					</h1>
+                    	<div class="button-wrapper">
+					
+					<a href="{{ path('product_detail', {'id': 3}) }}" class="btn outline">DETAILS</a>
+				</div>
+				</div>
+			
+			</div>
+		</div>
+
+	</div>
+{% endblock %}

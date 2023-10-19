@@ -2,13 +2,13 @@
 
 <header class="header row-limit-size" style="background-image: url('{{ asset('img/bg_header.png') }}');">
 	<div class="header-content">
-		<div
-			class="header-search">
-			{# <form action="" method="POST"> #}
-			<input type="text" placeholder="Rechercher des bonbons">
-			<button type="submit">
-				<i class="fas fa-search"></i>
-			</button>
+		<div class="header-search">
+			 <form action="{{ path('search') }}" method="GET">
+        <input type="text" name="query" placeholder="Rechercher des bonbons">
+        <button type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
 		</div>
 		<div class="header-logo">
 			<img class="imgHeader" src="{{ asset('img/logo1.png') }}" alt="logo">
@@ -17,7 +17,7 @@
 			<a href="{{ path('app_login') }}">
 				<i class="fas fa-user"></i>
 			</a>
-			<a href="#">
+			<a href="{{ path('cart') }}">
 				<i class="fas fa-shopping-cart"></i>
 			</a>
 		</div>

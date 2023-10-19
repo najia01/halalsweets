@@ -30,6 +30,7 @@
   src: url(../fonts/Jackie\ Bold.otf);
 }
 .container-form {
+  width: 100%;
   background-image: url("../img/cadre.jpg");
   background-size: cover;
   padding: 20px;

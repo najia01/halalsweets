@@ -45,6 +45,7 @@ $purple: #CB6CE6;
         align-content: center;
         justify-content: center;
         align-items: center;
+        height: 700px;
 
         h2 {
             font-size: 1.7rem;
@@ -57,11 +58,12 @@ $purple: #CB6CE6;
             font-family: $font-gotham-book;
             font-style: italic;
             margin-top: 60px;
-            height: 200px;
+            // height: 500px;
             width: 400px;
         }
 
         .price {
+            margin-top: 30px;
             font-size: 1.3rem;
             font-family: $font-gotham-book;
         }

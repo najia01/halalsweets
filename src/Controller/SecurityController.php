@@ -22,11 +22,10 @@ class SecurityController extends AbstractController
     
     #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
-    {
-        
+    { 
         $form = $this->createForm(RegistrationFormType::class);
         if ($this->getUser()) {
-            return $this->redirectToRoute('login');
+            return $this->redirectToRoute('admin_dashboard');
         }
 
         // get the login error if there is one

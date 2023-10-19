@@ -6,6 +6,7 @@ use App\Entity\Cart;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
+use App\Entity\Users;
 /**
  * @extends ServiceEntityRepository<Cart>
  *
@@ -21,6 +22,14 @@ class CartRepository extends ServiceEntityRepository
         parent::__construct($registry, Cart::class);
     }
 
+    public function findCartByUser(Users $user): ?Cart
+    {
+        return $this->createQueryBuilder('c')
+            ->where('c.UserId = :user')
+            ->setParameter('user', $user)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
 //    /**
 //     * @return Cart[] Returns an array of Cart objects
 //     */

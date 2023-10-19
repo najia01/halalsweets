@@ -6,6 +6,7 @@ use App\Repository\CartRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Sweets;
 
 #[ORM\Entity(repositoryClass: CartRepository::class)]
 class Cart
@@ -50,13 +51,22 @@ class Cart
 
         return $this;
     }
-
+    private function recalculateTotal(): void
+    {
+        $total = 0;
+        foreach ($this->items as $item) {
+            $total += $item->getPrice();
+        }
+        $this->Total  = $total;
+    }
     public function removeItem(Sweets $item): static
     {
         $this->items->removeElement($item);
-
+        // Recalculer le total après la suppression de l'article
+        $this->recalculateTotal();
         return $this;
     }
+   
 
     public function getUserId(): ?Users
     {

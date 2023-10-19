@@ -30,6 +30,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  height: 700px;
 }
 .product-details .product-info h2 {
   font-size: 1.7rem;
@@ -41,10 +42,10 @@
   font-family: "Gotham Book";
   font-style: italic;
   margin-top: 60px;
-  height: 200px;
   width: 400px;
 }
 .product-details .product-info .price {
+  margin-top: 30px;
   font-size: 1.3rem;
   font-family: "Gotham Book";
 }
