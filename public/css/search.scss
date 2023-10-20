@@ -48,24 +48,30 @@ $purple: #CB6CE6;
 .search-container {
     text-align: center;
     padding: 20px;
-    
+
     h1 {
-        font-size: 24px;
+        width: 100%;
+        font-size: 3rem;
+        font-family: $font-JackieB;
+        text-align: center;
+        color: $primary;
     }
-    
+
     form {
         margin-top: 20px;
-        
+
         input {
+            width: 300px;
             padding: 10px;
             font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        
+
         button {
             padding: 10px 20px;
-            background-color: #007BFF;
+            background-color: $primary;
+            width: 150px;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -74,46 +80,81 @@ $purple: #CB6CE6;
     }
 }
 
-.results-container {
-    margin-top: 40px;
-    
-    h2 {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-    
+.container-card {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+
     .results-list {
-        list-style: none;
-        padding: 0;
-        
-        li {
+        list-style-type: none;
+        display: contents;
+
+
+        & .card {
+            width: 350px;
+            height: 500px;
             display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
             align-items: center;
-            margin-bottom: 20px;
-            
+            border: 2px solid deeppink;
+            border-radius: 20px;
+        }
+
+        @keyframes myAnim {
+            0% {
+                opacity: 0;
+                transform: scale(1.4);
+            }
+        
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .card-image {
+
             img {
-                width: 100px;
-                height: 100px;
-                margin-right: 20px;
-                border-radius: 5px;
+                max-width: 100%;
+                width: 250px;
+                background-size: contain;
+
+                border-radius: 20px;
+                animation: myAnim 3s ease 0s 1 normal forwards;
             }
-            
-            h3 {
-                font-size: 18px;
+        }
+
+        .card-description {
+
+            text-align: center;
+
+            h2 {
+                width: 200px;
+                font-size: 1.1rem;
+                margin: 10px 0;
+                font-family: $font-gotham-medium-italic;
             }
-            
+
             p {
-                font-size: 16px;
+                font-size: 1rem;
+                font-family: $font-gotham-medium-italic;
             }
-            
-            .btn {
-                padding: 10px 20px;
-                background-color: #007BFF;
+
+            .card-buy-link {
+                display: inline-block;
+                background-color: $primary;
                 color: #fff;
                 text-decoration: none;
-                border: none;
+                padding: 5px 10px;
                 border-radius: 5px;
-                cursor: pointer;
+                margin-top: 10px;
+                font-weight: bold;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: $purple;
+                }
             }
         }
     }

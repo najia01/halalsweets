@@ -34,12 +34,17 @@
   padding: 20px;
 }
 .search-container h1 {
-  font-size: 24px;
+  width: 100%;
+  font-size: 3rem;
+  font-family: "jackie bold";
+  text-align: center;
+  color: #FC177F;
 }
 .search-container form {
   margin-top: 20px;
 }
 .search-container form input {
+  width: 300px;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -47,47 +52,75 @@
 }
 .search-container form button {
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: #FC177F;
+  width: 150px;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.results-container {
-  margin-top: 40px;
-}
-.results-container h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-.results-container .results-list {
-  list-style: none;
-  padding: 0;
-}
-.results-container .results-list li {
+.container-card {
   display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+.container-card .results-list {
+  list-style-type: none;
+  display: contents;
+}
+.container-card .results-list .card {
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  border: 2px solid deeppink;
+  border-radius: 20px;
 }
-.results-container .results-list li img {
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
-  border-radius: 5px;
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-.results-container .results-list li h3 {
-  font-size: 18px;
+.container-card .results-list .card-image img {
+  max-width: 100%;
+  width: 250px;
+  background-size: contain;
+  border-radius: 20px;
+  animation: myAnim 3s ease 0s 1 normal forwards;
 }
-.results-container .results-list li p {
-  font-size: 16px;
+.container-card .results-list .card-description {
+  text-align: center;
 }
-.results-container .results-list li .btn {
-  padding: 10px 20px;
-  background-color: #007BFF;
+.container-card .results-list .card-description h2 {
+  width: 200px;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  font-family: "gotham-medium-italic";
+}
+.container-card .results-list .card-description p {
+  font-size: 1rem;
+  font-family: "gotham-medium-italic";
+}
+.container-card .results-list .card-description .card-buy-link {
+  display: inline-block;
+  background-color: #FC177F;
   color: #fff;
   text-decoration: none;
-  border: none;
+  padding: 5px 10px;
   border-radius: 5px;
-  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.container-card .results-list .card-description .card-buy-link:hover {
+  background-color: #CB6CE6;
 }/*# sourceMappingURL=search.css.map */

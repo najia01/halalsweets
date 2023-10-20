@@ -13,7 +13,7 @@ class HomepageController extends AbstractController
     #[Route('/', name: 'app_page')]
     public function home(SweetsRepository $sweetsRepository)
     {
-        $featuredSweets = $sweetsRepository->findFeaturedSweets(3); // Par exemple, récupérez 3 bonbons
+        $featuredSweets = $sweetsRepository->findFeaturedSweets(3); 
     
         return $this->render('homepage.html.twig', [
             'featuredSweets' => $featuredSweets,

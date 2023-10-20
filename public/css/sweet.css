@@ -11,50 +11,52 @@
 
 h1 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   padding: 40px;
   font-family: "jackie";
   color: #FC177F;
 }
 
-.container-card {
+.container-card1 {
   display: grid;
   grid-template-columns: repeat(3, 3fr);
   gap: 15px;
   justify-content: center;
   align-items: center;
   justify-items: center;
+  height: auto;
+  margin-bottom: 80px;
 }
-.container-card .list-sweets {
+.container-card1 .list-sweets {
   list-style-type: none;
   display: contents;
 }
-.container-card .list-sweets li {
+.container-card1 .list-sweets li {
   width: 350px;
 }
-.container-card .list-sweets li .card {
+.container-card1 .list-sweets li .card {
   background-color: #ffd0eb;
   border: 1px solid #ccc;
   padding: 20px;
   text-align: center;
   border-radius: 25px;
-  height: 500px;
+  height: 450px;
 }
-.container-card .list-sweets li .card-image img {
+.container-card1 .list-sweets li .card-image img {
   max-width: 100%;
   width: 250px;
   border-radius: 20px;
 }
-.container-card .list-sweets li .card-description h2 {
+.container-card1 .list-sweets li .card-description h2 {
   font-size: 1.5rem;
   margin: 10px 0;
   font-family: "gotham-medium-italic";
 }
-.container-card .list-sweets li .card-description p {
+.container-card1 .list-sweets li .card-description p {
   font-size: 1rem;
   font-family: "gotham-medium-italic";
 }
-.container-card .list-sweets li .card-description .card-buy-link {
+.container-card1 .list-sweets li .card-description .card-buy-link {
   display: inline-block;
   background-color: #FC177F;
   color: #fff;
@@ -65,6 +67,6 @@ h1 {
   font-weight: bold;
   transition: background-color 0.3s;
 }
-.container-card .list-sweets li .card-description .card-buy-link:hover {
+.container-card1 .list-sweets li .card-description .card-buy-link:hover {
   background-color: #CB6CE6;
 }/*# sourceMappingURL=sweet.css.map */

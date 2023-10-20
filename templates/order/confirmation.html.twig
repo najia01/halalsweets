@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Validation de Commande{% endblock %}
+
+{% block body %}
+{% include 'header.html.twig' with { 'categories': categories } %}
+
+
+   <div class="container-order">
+    <h1 class="title-validation">Validation de Commande</h1>
+    <p class="thanks">Merci pour votre commande.</p><br>
+    <p> Voici les détails de votre commande </p>
+
+    <div class="order-details">
+        <ul>
+            {% for sweet in orderDetails.sweets %}
+                <li>{{ sweet.name }} : {{ sweet.price }} €</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <p class="total-price">Le montant total de votre commande est : {{ orderDetails.totalAmount }} €</p>
+
+    <p class="order-ready">Votre commande sera prête dans les 2 heures. <br>Merci de passer la récupérer à notre magasin.</p>
+
+    <a href="{{ path('app_page') }}" class="btn">Retour à l'accueil</a>
+</div>
+
+
+    {% include 'footer.html.twig' %}
+{% endblock %}

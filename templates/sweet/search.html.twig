@@ -1,32 +1,42 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Recherche de Bonbons{% endblock %}
+{% block title %}Recherche de Bonbons
+{% endblock %}
 
 {% block body %}
-    <div class="search-container">
-        <h1>Recherche de Bonbons</h1>
-        <form action="{{ path('search') }}" method="GET">
-            <input type="text" name="query" placeholder="Rechercher des bonbons" value="{{ app.request.query.get('query', '') }}">
-            <button type="submit"><i class="fas fa-search"></i> Rechercher</button>
-        </form>
-    </div>
+	<div class="search-container">
+		<h1>Résultats de la recherche</h1>
+		<form action="{{ path('search') }}" method="GET">
+			<input type="text" name="query" placeholder="Rechercher des bonbons" value="{{ app.request.query.get('query', '') }}">
+			<button type="submit">
+				<i class="fas fa-search"></i>
+				Rechercher</button>
+		</form>
+	</div>
 
-    <div class="results-container">
-        <h2>Résultats de la recherche</h2>
-        <ul class="results-list">
-            {% if results is not empty %}
-                {% for sweet in results %}
-                    <li>
-                        <img src="{{ asset('img/' ~ sweet.thumbnail) }}" alt="{{ sweet.name }}">
-                        <h3>{{ sweet.name }}</h3>
-                        <p>{{ sweet.description }}</p>
-                        <p>Prix : {{ sweet.price }}€</p>
-                        <a href="{{ path('product_detail', {'id': sweet.id}) }}" class="btn">Détails</a>
-                    </li>
-                {% endfor %}
-            {% else %}
-                <p>Aucun résultat trouvé.</p>
-            {% endif %}
-        </ul>
-    </div>
-{% endblock %}
+	<div class="container-card row-limit-size">
+
+		<ul class="results-list">
+			{% if results is not empty %}
+				{% for sweet in results %}
+					<li class="card">
+						<figure class="card-image">
+							<img src="{{ asset('img/' ~ sweet.thumbnail) }}" alt="Thumbnail du bonbon">
+						</figure>
+						<figcaption class="card-description">
+							<h2>{{ sweet.name }}</h2>
+							<p>Prix :
+								{{ sweet.price }}
+								€</p>
+							<a href="{{ path('product_detail', { 'id': sweet.id }) }}" class="card-buy-link">Détails</a>
+						</figcaption>
+					</li>
+				{% endfor %}
+			{% else %}
+				<p>Aucun résultat trouvé.</p>
+			{% endif %}
+		</ul>
+	</div>
+
+
+</div>{% endblock %}

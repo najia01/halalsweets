@@ -6,6 +6,8 @@
 
 {% block body %}
 
+	{% include 'header.html.twig' with { 'categories': categories } %}
+
 
 	<div class="product-details row-limit-size">
 		<div class="product-image">
@@ -19,12 +21,11 @@
 				{{ sweet.price }}
 				€</p>
 			<a href="{{ path('add_to_cart', { 'sweetId': sweet.id }) }}" class="add-to-cart-link">
-    <i class="fas fa-shopping-cart"></i> 
-</a>
-
+				<i class="fas fa-shopping-cart"></i>
+			</a>
 
 
 		</div>
 	</div>
-
+	{% include 'footer.html.twig' %}
 {% endblock %}

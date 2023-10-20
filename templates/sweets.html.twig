@@ -1,31 +1,39 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Catégorie {{ category.name }} - HalalSweetShop{% endblock %}
+
+{% block stylesheets %}
+    
+    {{ parent() }}
+{% endblock %}
+
 {% block body %}
 
-
-	<h1>{{ category.name }}</h1>
-	<div class="container-card row-limit-size ">
-		<ul class="list-sweets">
-			{% for sweet in sweets %}
-				<li>
-					<div class="card">
-						<figure class="card-image">
-							<img src="{{ asset('img/' ~ sweet.thumbnail) }}" alt="Thumbnail du bonbon">
-						</figure>
-						<figcaption class="card-description">
-							<h2>{{ sweet.name }}</h2>
-							<p>Prix :
-								{{ sweet.price }}
-								€</p>
-							
-						<a href="{{ path('product_detail', { 'id': sweet.id }) }}" class="card-buy-link">Détails</a>
-						</figcaption>
-					</div>
-				</li>
-			{% endfor %}
-		</ul>
-	</div>
-
-
+    {% include 'header.html.twig' with { 'categories': categories } %}
+    
+    <h1>{{ category.name }}</h1>
+    <div class="container-card1 row-limit-size ">
+        <ul class="list-sweets">
+            {% for sweet in sweets %}
+                <li>
+                    <div class="card">
+                        <figure class="card-image">
+                            <img src="{{ asset('img/' ~ sweet.thumbnail) }}" alt="Thumbnail du bonbon">
+                        </figure>
+                        <figcaption class="card-description">
+                            <h2>{{ sweet.name }}</h2>
+                            <p>Prix :
+                                {{ sweet.price }}
+                                €</p>
+                            
+                            <a href="{{ path('product_detail', { 'id': sweet.id }) }}" class="card-buy-link">Détails</a>
+                        </figcaption>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    {% include 'footer.html.twig' %}
 
 {% endblock %}

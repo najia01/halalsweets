@@ -6,7 +6,7 @@ kernel:
   resource: ../src/Kernel.php
   type: annotation
 
-# hoempage
+# homepage
 app_page:
   path: /
   controller: App\Controller\HomepageController::home
@@ -64,3 +64,14 @@ search:
     path: /search
     controller: App\Controller\SweetsController::searchAction
 
+# route pour validation de commande 
+
+order_validate:
+    path: '/order/validate'
+    controller: 'App\Controller\OrderController::validate'
+
+# pour le total de cde
+order_validation:
+    path: /order/validate
+    controller: App\Controller\OrderController::validationCommande
+    

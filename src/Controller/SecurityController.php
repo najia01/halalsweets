@@ -25,7 +25,7 @@ class SecurityController extends AbstractController
     { 
         $form = $this->createForm(RegistrationFormType::class);
         if ($this->getUser()) {
-            return $this->redirectToRoute('admin_dashboard');
+            return $this->redirectToRoute('app_page');
         }
 
         // get the login error if there is one

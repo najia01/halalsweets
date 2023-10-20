@@ -4,6 +4,10 @@
 {% endblock %}
 
 {% block body %}
+
+{% include 'header.html.twig' with { 'categories': categories } %}
+
+
 	<div class="cart-container row-limit-size">
 		<h1 class="title-cart">Votre Panier</h1>
 		<div class="cart-items">
@@ -49,7 +53,7 @@
 			<div
 				class="cart-summary">
 				
-				<a href="#" class="checkout-button">Paiement</a>
+				<a href="{{ path('order_validate') }}" class="checkout-button">Valider</a>
 			</div>
 
 		</div>
@@ -107,4 +111,6 @@
 		</div>
 
 	</div>
+
+	{% include 'footer.html.twig' %}
 {% endblock %}

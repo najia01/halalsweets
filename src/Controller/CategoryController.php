@@ -30,10 +30,9 @@ class CategoryController extends AbstractController
             return $this->redirectToRoute('app_homepage');
         }
     }
-
-    /**
-     * @Route("/", name="app_homepage")
-     */
+    
+     #[Route("/", name:"app_homepage")]
+     
     public function base(CategoryRepository $categoryRepository): Response
     {
         $categories = $categoryRepository->findAll();
